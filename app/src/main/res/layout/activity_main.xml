@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+<!-- YoutubePlayerView 는 반드시 YoutubeBaseActivity 안에서만 사용 가능  -->
+<!-- YoutubeBaseActivity 는 예전버전이라서 androoidX 라이브러리는 사용 불가   -->
+
+<!-- 그래서 보통 YoutubePlayerView 를 가지고 있는
+   YoutubePlayerFragment 를 배치하여 사용 -->
+    <fragment
+        android:id="@+id/youtube_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.google.android.youtube.player.YouTubePlayerFragment"/>
+    <fragment
+        android:id="@+id/youtube_fragment2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.google.android.youtube.player.YouTubePlayerFragment"/>
+    <fragment
+        android:id="@+id/youtube_fragment3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.google.android.youtube.player.YouTubePlayerFragment"/>
+<!--  동영상의 썸네일 이미지를 보여주는 뷰  -->
+    <com.google.android.youtube.player.YouTubeThumbnailView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/youtube_thumbnail"
+        android:layout_marginTop="8dp"
+        />
+
+
+</LinearLayout>
